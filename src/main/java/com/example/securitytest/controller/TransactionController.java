@@ -37,8 +37,7 @@ public class TransactionController {
             System.out.println(transaction.getAccountTransaction());
             return iTransactionService.addTransaction(transaction);
         }catch (Exception e){
-            e.printStackTrace();
-            return null;
+            throw new RuntimeException(e);
         }
     }
 }

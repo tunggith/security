@@ -1,0 +1,4 @@
+2024-07-18 15:15:43 ERROR TransactionException:19 - org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+2024-07-18 15:19:02 ERROR TransactionException:19 - org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+2024-07-18 15:21:16 ERROR AESUtil:19 - java.lang.IllegalArgumentException: Missing argument
+2024-07-18 15:21:16 ERROR ITransactionServiceIMPL:44 - java.lang.NullPointerException: Cannot invoke "String.getBytes(java.nio.charset.Charset)" because "src" is null
