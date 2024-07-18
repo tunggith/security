@@ -1,5 +1,6 @@
 package com.example.securitytest.entity;
 
+import com.example.securitytest.contanst.SecurityContanst;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,16 +23,16 @@ import java.math.BigDecimal;
 public class TransactionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = SecurityContanst.ENTITY_COLUMN_ID)
     private Integer id;
-    @Column(name = "transaction_id")
+    @Column(name = SecurityContanst.ENTITY_COLUMN_TRANSACTION_ID)
     private String transactionId;
-    @Column(name = "account_transaction")
+    @Column(name = SecurityContanst.ENTITY_COLUMN_ACCOUNT_TRANSACTION)
     private String accountTransaction;
-    @Column(name = "indebt")
-    private BigDecimal indebt;
-    @Column(name = "have")
+    @Column(name = SecurityContanst.ENTITY_COLUMN_INDEBT)
+    private String indebt;
+    @Column(name = SecurityContanst.ENTITY_COLUMN_HAVE)
     private String have;
-    @Column(name = "time_transaction")
+    @Column(name = SecurityContanst.ENTITY_COLUMN_TIME_TRANSACTION)
     private String timeTransaction;
 }
