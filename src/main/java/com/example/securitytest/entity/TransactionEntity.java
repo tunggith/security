@@ -7,12 +7,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -30,9 +33,10 @@ public class TransactionEntity {
     @Column(name = SecurityContanst.ENTITY_COLUMN_ACCOUNT_TRANSACTION)
     private String accountTransaction;
     @Column(name = SecurityContanst.ENTITY_COLUMN_INDEBT)
-    private String indebt;
+    private BigDecimal indebt;
     @Column(name = SecurityContanst.ENTITY_COLUMN_HAVE)
     private String have;
     @Column(name = SecurityContanst.ENTITY_COLUMN_TIME_TRANSACTION)
-    private String timeTransaction;
+    @Temporal(TemporalType.DATE)
+    private Date timeTransaction;
 }
